@@ -1,3 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #F2C53D;
+  padding: 20px;
+}
+
+header h1 {
+  color: #3966BF;
+  text-align: center;
+  font-family: 'Lato', cursive;
+}
+
 body {
-  background: red;
+  background: #223459;
+}
+
+.scoreboard {
+  margin: 20px auto;
+  border: 3px solid #BF2011;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  color: #F2C53D;
+  font-size: 45px;
+  padding: 15px 20px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.badge {
+  background: #F24182;
+  color: #F2C53D;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 2px 10px;
+}
+
+#userLabel {
+  position: absolute;
+  top: 30px;
+  left: -20px;
+}
+
+#pcLabel {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+}
+
+.result {
+  font-size: 40px;
+  color: #F2C53D;
+}
+
+.result p {
+  text-align: center;
 }
