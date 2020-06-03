@@ -2,14 +2,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
 
-    <title>RockPaperScissors</title>
+    <title>RPS Game</title>
   </head>
   <body>
-    <h1>hello there</h1>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header><!-- <h1>hello there</h1> -->
+    <div class="scoreboard">
+      <div id="userLabel" class="badge">You</div>
+      <div id="pcLabel" class="badge">PC</div>
+      <span id="userScore">0</span>:<span id="pcScore">0</span>
+    </div>
+
+    <div class="result">
+      <p>Paper covers Rock you win!</p>
+    </div>
+
+    <div class="option">
+      <div class="option" id="r">✊🏼</div>
+      <div class="option" id="s">✌🏻</div>
+      <div class="option" id="p">✋🏻</div>
+    </div>
+
+    <p id="actionMessage">Make your move!</p>
 
   </body>
 </html>
