@@ -12,13 +12,21 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
+// A function that compares the User's hand to the PC's hand
+function game(userChoice) {
+  console.log("You chose " + userChoice);
+}
 
-rock_div.addEventListener('click', function() {
-  console.log("hey you clicked on rock.");
-});
-paper_div.addEventListener('click', function() {
-  console.log("hey you clicked on paper.");
-});
-scissors_div.addEventListener('click', function() {
-  console.log("hey you clicked on scissors.");
-});
+function main() {
+    rock_div.addEventListener('click', function() {
+      game("rock");
+    });
+    paper_div.addEventListener('click', function() {
+      game("paper");
+    });
+    scissors_div.addEventListener('click', function() {
+      game("scissors");
+    });
+}
+
+main();
