@@ -1,13 +1,13 @@
 console.log('hellow');
 
 //Caching the DOM - putting dom elements into variables so you don't constantly need to getElementById('etc').
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("userScore");
 const computerScore_span = document.getElementById(("pcScore"));
 // Use '_' for variable names so you know it's a DOM variable
 const scoreBoard_div = document.querySelector(".scoreboard");
-const result_div = document.querySelector(".result");
+const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
@@ -19,24 +19,50 @@ function getComputerChoice() {
 }
 // console.log(getComputerChoice());
 
+function win(user, computer) {
+  userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = user + " vs " + computer + ". You Win!";
+}
+
+function lose(user, computer) {
+  computerScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore_span.innerHTML = computerScore;
+  result_p.innerHTML = user + " vs " + computer + ". You Lose!";
+
+}
+
+function draw(user, computer) {
+  // userScore++;
+  userScore_span.innerHTML = userScore;
+  computerScore.innerHTML = computerScore;
+  result_p.innerHTML = user + " vs " + computer + ". It\'s a draw!";
+
+}
+
 // A function that compares the User's hand to the PC's hand
 function game(userChoice) {
   const computerChoice = getComputerChoice();
   // console.log('PC: ' + computerChoice + ' VS ' + 'User: ' + userChoice);
   switch (userChoice + computerChoice) {
-    case "rockpaper":
+    case "rockscissors":
     case "paperrock":
     case "scissorspaper":
+    win(userChoice, computerChoice);
       console.log("User Wins!");
       break;
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
+      lose(userChoice, computerChoice);
       console.log("You lose. PC wins!");
       break;
     case "rockrock":
     case "paperpaper":
     case "scissorsscissors":
+    draw(userChoice, computerChoice);
       console.log("It's a draw!");
       break;
 
