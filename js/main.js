@@ -20,17 +20,21 @@ function getComputerChoice() {
 // console.log(getComputerChoice());
 
 function win(user, computer) {
-  userScore++;
-  userScore_span.innerHTML = userScore;
+  userScore++; //increments +1 whenever a win is made by the user
+  userScore_span.innerHTML = userScore; //calls on the DOM for the scoreboard to change when a win is made
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = user + " vs " + computer + ". You Win!";
+  const smallUserWord = "user".fontsize(3).sup(3); //to show which hand belongs to which player
+  const smallCompWord = "pc".fontsize(3).sup(3);
+  result_p.innerHTML = `${user}${smallUserWord} vs ${computer}${smallCompWord}. You Win!`; //DOM element prints which was played by the user and PC and who won the hand
 }
 
 function lose(user, computer) {
   computerScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = user + " vs " + computer + ". You Lose!";
+  const smallUserWord = "user".fontsize(3).sup(3);
+  const smallCompWord = "pc".fontsize(3).sup(3);
+  result_p.innerHTML = `${user}${smallUserWord} vs ${computer}${smallCompWord}. You Lose!`;
 
 }
 
@@ -38,7 +42,9 @@ function draw(user, computer) {
   // userScore++;
   userScore_span.innerHTML = userScore;
   computerScore.innerHTML = computerScore;
-  result_p.innerHTML = user + " vs " + computer + ". It\'s a draw!";
+  const smallUserWord = "user".fontsize(3).sup(3);
+  const smallCompWord = "pc".fontsize(3).sup(3);
+  result_p.innerHTML = `${user}${smallUserWord} vs ${computer}${smallCompWord}. It's a draw!`;;
 
 }
 
