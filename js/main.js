@@ -32,7 +32,7 @@ function game(userChoice) {
     case "rockpaper":
     case "paperscissors":
     case "scissorsrock":
-      console.log("PC wins!");
+      console.log("You lose. PC wins!");
       break;
     case "rockrock":
     case "paperpaper":
