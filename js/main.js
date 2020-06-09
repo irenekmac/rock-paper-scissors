@@ -26,6 +26,7 @@ function win(user, computer) {
   const smallUserWord = "user".fontsize(3).sup(3); //to show which hand belongs to which player
   const smallCompWord = "pc".fontsize(3).sup(3);
   result_p.innerHTML = `${user}${smallUserWord} vs ${computer}${smallCompWord}. You Win!`; //DOM element prints which was played by the user and PC and who won the hand
+  document.getElementById(user).classList.add('greenGlow');
 }
 
 function lose(user, computer) {
@@ -35,16 +36,16 @@ function lose(user, computer) {
   const smallUserWord = "user".fontsize(3).sup(3);
   const smallCompWord = "pc".fontsize(3).sup(3);
   result_p.innerHTML = `${user}${smallUserWord} vs ${computer}${smallCompWord}. You Lose!`;
-
+  document.getElementById(user).classList.add('redGlow');
 }
 
 function draw(user, computer) {
-  // userScore++;
   userScore_span.innerHTML = userScore;
   computerScore.innerHTML = computerScore;
   const smallUserWord = "user".fontsize(3).sup(3);
   const smallCompWord = "pc".fontsize(3).sup(3);
   result_p.innerHTML = `${user}${smallUserWord} vs ${computer}${smallCompWord}. It's a draw!`;;
+  document.getElementById(user).classList.add('greyGlow');
 
 }
 
